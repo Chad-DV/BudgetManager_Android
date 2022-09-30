@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DailyAnalyticsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:background="#12232E"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        <TextView
+            android:id="@+id/totalBudgetAmountTextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="Total Spending: R 0.00"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="18dp"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/green">
+            </ImageView>
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="L 50%"
+                android:layout_gravity="center_vertical"
+                android:textSize="12sp"
+                android:textColor="#000">
+            </TextView>
+
+            <ImageView
+
+                android:layout_width="0dp"
+                android:layout_height="18dp"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/brown">
+            </ImageView>
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="50% - 90%"
+                android:layout_gravity="center_vertical"
+                android:textSize="12sp"
+                android:textColor="#000">
+            </TextView>
+
+            <ImageView
+
+                android:layout_width="0dp"
+                android:layout_height="18dp"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/red">
+            </ImageView>
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="G 100%"
+                android:layout_gravity="center_vertical"
+                android:textSize="12sp"
+                android:textColor="#000">
+            </TextView>
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutTransport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+
+                        android:id="@+id/linearLayout"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Transport"
+                            android:textColor="#000"
+                            android:textSize="18sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/analyticsTransportAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="0.00"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+                            android:textStyle="bold"></TextView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="status"
+                                android:textColor="#000"
+                                android:textSize="12sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <ImageView
+                                android:id="@+id/transport_status"
+                                android:layout_width="0dp"
+                                android:layout_height="18dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1">
+
+                            </ImageView>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Today"
+                            android:textColor="#000"
+                            android:textSize="12sp"></TextView>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:layout_toEndOf="@id/linearLayout"
+                        android:src="@drawable/ic_transport"></ImageView>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutFood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+
+                        android:id="@+id/linearLayout1"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Food"
+                            android:textColor="#000"
+                            android:textSize="18sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/analyticsFoodAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="0.00"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+                            android:textStyle="bold"></TextView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="status"
+                                android:textColor="#000"
+                                android:textSize="12sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <ImageView
+                                android:id="@+id/food_status"
+                                android:layout_width="0dp"
+                                android:layout_height="18dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1">
+
+                            </ImageView>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Today"
+                            android:textColor="#000"
+                            android:textSize="12sp"></TextView>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:layout_toEndOf="@id/linearLayout1"
+                        android:src="@drawable/ic_food"></ImageView>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutHouse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="House"
+                            android:textColor="#000"
+                            android:textSize="18sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/analyticsHouseAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="0.00"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+                            android:textStyle="bold"></TextView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="status"
+                                android:textColor="#000"
+                                android:textSize="12sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <ImageView
+                                android:id="@+id/house_status"
+                                android:layout_width="0dp"
+                                android:layout_height="18dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1">
+
+                            </ImageView>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Today"
+                            android:textColor="#000"
+                            android:textSize="12sp"></TextView>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:layout_toEndOf="@id/linearLayout2"
+                        android:src="@drawable/ic_house"></ImageView>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutEntertainment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+
+                        android:id="@+id/linearLayout3"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Entertainment"
+                            android:textColor="#000"
+                            android:textSize="18sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/analyticsEntertainmentAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="0.00"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+                            android:textStyle="bold"></TextView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="status"
+                                android:textColor="#000"
+                                android:textSize="12sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <ImageView
+                                android:id="@+id/entertainment_status"
+                                android:layout_width="0dp"
+                                android:layout_height="18dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1">
+
+                            </ImageView>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Today"
+                            android:textColor="#000"
+                            android:textSize="12sp"></TextView>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:layout_toEndOf="@id/linearLayout3"
+                        android:src="@drawable/ic_entertainment"></ImageView>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutEducation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+
+                        android:id="@+id/linearLayout4"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Education"
+                            android:textColor="#000"
+                            android:textSize="18sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/analyticsEducationAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="0.00"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+                            android:textStyle="bold"></TextView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="status"
+                                android:textColor="#000"
+                                android:textSize="12sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <ImageView
+                                android:id="@+id/education_status"
+                                android:layout_width="0dp"
+                                android:layout_height="18dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1">
+
+                            </ImageView>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Today"
+                            android:textColor="#000"
+                            android:textSize="12sp"></TextView>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:layout_toEndOf="@id/linearLayout4"
+                        android:src="@drawable/ic_education"></ImageView>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutCharity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+
+                        android:id="@+id/linearLayout5"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Charity"
+                            android:textColor="#000"
+                            android:textSize="18sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/analyticsCharityAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="0.00"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+                            android:textStyle="bold"></TextView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="status"
+                                android:textColor="#000"
+                                android:textSize="12sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <ImageView
+                                android:id="@+id/charity_status"
+                                android:layout_width="0dp"
+                                android:layout_height="18dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1">
+
+                            </ImageView>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Today"
+                            android:textColor="#000"
+                            android:textSize="12sp"></TextView>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:layout_toEndOf="@id/linearLayout5"
+                        android:src="@drawable/ic_consultancy"></ImageView>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutApparel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+
+                        android:id="@+id/linearLayout6"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Apparel"
+                            android:textColor="#000"
+                            android:textSize="18sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/analyticsApparelAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="0.00"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+                            android:textStyle="bold"></TextView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="status"
+                                android:textColor="#000"
+                                android:textSize="12sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <ImageView
+                                android:id="@+id/apparel_status"
+                                android:layout_width="0dp"
+                                android:layout_height="18dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1">
+
+                            </ImageView>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Today"
+                            android:textColor="#000"
+                            android:textSize="12sp"></TextView>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:layout_toEndOf="@id/linearLayout6"
+                        android:src="@drawable/ic_shirt"></ImageView>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutHealth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+
+                        android:id="@+id/linearLayout7"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Health"
+                            android:textColor="#000"
+                            android:textSize="18sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/analyticsHealthAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="0.00"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+                            android:textStyle="bold"></TextView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="status"
+                                android:textColor="#000"
+                                android:textSize="12sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <ImageView
+                                android:id="@+id/health_status"
+                                android:layout_width="0dp"
+                                android:layout_height="18dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1">
+
+                            </ImageView>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Today"
+                            android:textColor="#000"
+                            android:textSize="12sp"></TextView>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:layout_toEndOf="@id/linearLayout7"
+                        android:src="@drawable/ic_health"></ImageView>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutPersonal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+
+                        android:id="@+id/linearLayout8"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Personal"
+                            android:textColor="#000"
+                            android:textSize="18sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/analyticsPersonalAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="0.00"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+                            android:textStyle="bold"></TextView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="status"
+                                android:textColor="#000"
+                                android:textSize="12sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <ImageView
+                                android:id="@+id/personal_status"
+                                android:layout_width="0dp"
+                                android:layout_height="18dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1">
+
+                            </ImageView>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Today"
+                            android:textColor="#000"
+                            android:textSize="12sp"></TextView>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:layout_toEndOf="@id/linearLayout8"
+                        android:src="@drawable/ic_personalcare"></ImageView>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+
+                        android:id="@+id/linearLayout9"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Other"
+                            android:textColor="#000"
+                            android:textSize="18sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/analyticsOtherAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="0.00"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+                            android:textStyle="bold"></TextView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="status"
+                                android:textColor="#000"
+                                android:textSize="12sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <ImageView
+                                android:id="@+id/other_status"
+                                android:layout_width="0dp"
+                                android:layout_height="18dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1">
+
+                            </ImageView>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Today"
+                            android:textColor="#000"
+                            android:textSize="12sp"></TextView>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:layout_toEndOf="@id/linearLayout9"
+                        android:src="@drawable/ic_other"></ImageView>
+
+
+                </RelativeLayout>
+
+                <com.anychart.AnyChartView
+                    android:id="@+id/anyChartView"
+                    android:layout_width="match_parent"
+                    android:layout_height="600dp">
+
+                </com.anychart.AnyChartView>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutAnalysis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout10"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Summary Spending Status"
+                            android:textColor="#000"
+                            android:textSize="18sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/monthSpentAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total Spent: R 0"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+                            android:textStyle="bold"></TextView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/monthRatioSpending"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="status"
+                                android:textColor="#000"
+                                android:textSize="12sp"></TextView>
+
+                            <ImageView
+                                android:id="@+id/monthRatioSpending_Image"
+                                android:layout_width="0dp"
+                                android:layout_height="18dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1">
+
+                            </ImageView>
+                        </LinearLayout>
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Today"
+                            android:textColor="#000"
+                            android:textSize="12sp"></TextView>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:layout_toRightOf="@+id/linearLayout10"
+                        android:src="@drawable/today">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>
